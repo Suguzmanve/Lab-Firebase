@@ -6,8 +6,8 @@ rules_version = '2';
 					allow create: if request.resource.data.idemp is string &&
 									 request.resource.data.usuario is string &&
 									 request.resource.data.email is string &&
-									 request.resource.data.fechaCreacion is timestamp &&
-									 request.resource.data.ultimoAccesso is timestamp ;
+									 request.resource.data.fechaCreacion is string &&
+									 request.resource.data.ultimoAcceso is string ;
 					allow update: if true;
 					allow delete: if false;
 				}

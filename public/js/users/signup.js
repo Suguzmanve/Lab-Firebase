@@ -20,14 +20,12 @@
                 .then((userCredential) => {
                     const user = userCredential.user;
                    
-
-                    //si no tiene bd la crea como en mongo
                     db.collection("datosUsuarios").add({
                         "idemp": user.uid,
                         "usuario": txtNombre.value,
                         "email": user.email,
                         "fechaCreacion": fechaCreacion, //meterlos a la cole
-                        "ultimoAcceso": ultimoAcceso
+                        "ultimoAcceso": fechaCreacion
                     }).then(function (docRef) {
                         alert("Usuario agregado satisfactoriamente");
                         limpiar();
